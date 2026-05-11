@@ -2,13 +2,13 @@
  
 The goal is to simulate how actual data analysts in the e-commerce or retail industries work behind the scenes to use SQL to:
 
-	Set up a messy, real-world e-commerce inventory database
+- Set up a messy, real-world e-commerce inventory database
 
-	Perform Exploratory Data Analysis (EDA) to explore product categories, availability, and pricing inconsistencies
+- Perform Exploratory Data Analysis (EDA) to explore product categories, availability, and pricing inconsistencies
 
-	Implement Data Cleaning to handle null values, remove invalid entries, and convert pricing from paise to rupees
+- Implement Data Cleaning to handle null values, remove invalid entries, and convert pricing from paise to rupees
 
-	Write business-driven SQL queries to derive insights around pricing, inventory, stock availability, revenue and more
+- Write business-driven SQL queries to derive insights around pricing, inventory, stock availability, revenue and more
 
 📁 Dataset Overview
 
@@ -17,25 +17,26 @@ The dataset was sourced from Kaggle and was originally scraped from Zepto’s of
 Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate product names exist because the same product may appear multiple times in different package sizes, weights, discounts, or categories to improve visibility – exactly how real catalog data looks.
 
 🧾 Columns:
-	sku_id: Unique identifier for each product entry (Synthetic Primary Key)
 
-	name: Product name as it appears on the app
+- sku_id: Unique identifier for each product entry (Synthetic Primary Key)
 
-	category: Product category like Fruits, Snacks, Beverages, etc.
+- name: Product name as it appears on the app
 
-	mrp: Maximum Retail Price (originally in paise, converted to ₹)
+- category: Product category like Fruits, Snacks, Beverages, etc.
 
-	discountPercent: Discount applied on MRP
+- mrp: Maximum Retail Price (originally in paise, converted to ₹)
 
-	discountedSellingPrice: Final price after discount (also converted to $)
+- discountPercent: Discount applied on MRP
 
-	availableQuantity: Units available in inventory
+- discountedSellingPrice: Final price after discount (also converted to $)
 
-	weightInGms: Product weight in grams
+- availableQuantity: Units available in inventory
 
-	outOfStock: Boolean flag indicating stock availability
+- weightInGms: Product weight in grams
 
-	quantity: Number of units per package (mixed with grams for loose produce)
+- outOfStock: Boolean flag indicating stock availability
+
+- quantity: Number of units per package (mixed with grams for loose produce)
 
 
 🔧 Project Workflow
@@ -70,17 +71,17 @@ Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file usi
 
 4. 🔍 Data Exploration
 
-	Counted the total number of records in the dataset
+- Counted the total number of records in the dataset
 
-	Viewed a sample of the dataset to understand structure and content
+- Viewed a sample of the dataset to understand structure and content
 
-	Checked for null values across all columns
+- Checked for null values across all columns
 
-	Identified distinct product categories available in the dataset
+- Identified distinct product categories available in the dataset
 
-	Compared in-stock vs out-of-stock product counts
+- Compared in-stock vs out-of-stock product counts
 
-	Detected products present multiple times, representing different SKUs
+- Detected products present multiple times, representing different SKUs
 
 4. 🧹 Data Cleaning
  	Identified and removed rows where MRP or discounted selling price was zero
@@ -88,20 +89,20 @@ Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file usi
 
 5. 📊 Business Insights
    
-Found top 10 best-value products based on discount percentage
+- Found top 10 best-value products based on discount percentage
 
-Identified high-MRP products that are currently out of stock
+- Identified high-MRP products that are currently out of stock
 
-Estimated potential revenue for each product category
+- Estimated potential revenue for each product category
 
-Filtered expensive products (MRP > $500) with minimal discount
+- Filtered expensive products (MRP > $500) with minimal discount
 
-Ranked top 5 categories offering highest average discounts
+- Ranked top 5 categories offering highest average discounts
 
-Calculated price per gram to identify value-for-money products
+- Calculated price per gram to identify value-for-money products
 
-Grouped products based on weight into Low, Medium, and Bulk categories
+- Grouped products based on weight into Low, Medium, and Bulk categories
 
-Measured total inventory weight per product category
+- Measured total inventory weight per product category
 
 
