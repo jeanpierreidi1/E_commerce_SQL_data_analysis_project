@@ -24,7 +24,7 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 - category: Product category like Fruits, Snacks, Beverages, etc.
 
-- mrp: Maximum Retail Price (originally in paise, converted to ₹)
+- mrp: Maximum Retail Price (originally in paise, converted to $)
 
 - discountPercent: Discount applied on MRP
 
