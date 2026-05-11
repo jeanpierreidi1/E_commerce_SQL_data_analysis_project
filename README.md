@@ -84,10 +84,12 @@ Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file usi
 - Detected products present multiple times, representing different SKUs
 
 4. 🧹 Data Cleaning
- 	Identified and removed rows where MRP or discounted selling price was zero
- 	Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
 
-5. 📊 Business Insights
+- Identified and removed rows where MRP or discounted selling price was zero
+
+- Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+
+6. 📊 Business Insights
    
 - Found top 10 best-value products based on discount percentage
 
