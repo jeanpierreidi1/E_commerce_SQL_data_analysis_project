@@ -69,13 +69,15 @@ CREATE TABLE products (
 
 2. Data Import
 Loaded CSV using pgAdmin's import feature.
+
 If you're not able to use the import feature, write this code instead:
    \copy zepto(category,name,mrp,discountPercent,availableQuantity,
             discountedSellingPrice,weightInGms,outOfStock,quantity)
   FROM 'data/zepto_v2.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
+  
 Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 
-3. 🔍 Data Exploration
+4. 🔍 Data Exploration
 
 	Counted the total number of records in the dataset
 
