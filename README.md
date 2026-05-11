@@ -45,15 +45,25 @@ Here’s a step-by-step breakdown of what we do in this project:
 We start by creating a SQL table with appropriate data types:
 
 CREATE TABLE products (
+
   sku_id SERIAL PRIMARY KEY,
+  
   category VARCHAR(120),
+  
   name VARCHAR(150) NOT NULL,
+  
   mrp NUMERIC(8,2),
+  
   discountPercent NUMERIC(5,2),
+  
   availableQuantity INTEGER,
+  
   discountedSellingPrice NUMERIC(8,2),
+  
   weightInGms INTEGER,
+  
   outOfStock BOOLEAN,
+  
   quantity INTEGER
 );
 
@@ -68,10 +78,15 @@ Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file usi
 3. 🔍 Data Exploration
 
 	Counted the total number of records in the dataset
+
 	Viewed a sample of the dataset to understand structure and content
+
 	Checked for null values across all columns
+
 	Identified distinct product categories available in the dataset
+
 	Compared in-stock vs out-of-stock product counts
+
 	Detected products present multiple times, representing different SKUs
 
 4. 🧹 Data Cleaning
